@@ -1,0 +1,27 @@
+<?php 
+include('header.html');
+?>
+<!DOCTYPE html>
+<head>
+<title>Title page</title>
+<link rel="stylesheet" href="title.css">
+</head>
+<body>
+
+<div id="header-container">
+
+<p> select the course to start the quiz</p>
+<h3><?php
+include('login.php');
+echo $_SESSION["email"];
+?></h3>
+</div>
+<div id="subject-container">
+<a href="h.html" target="_blank">HTML</a>
+<a href="#">CSS</a>
+<a href="#">JAVASCRIPT</a>
+<a href="#">PHP</a>
+<a href="#">MYSQL</a>
+</div>
+</body>
+</html>

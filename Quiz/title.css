@@ -1,0 +1,30 @@
+#header-container{
+
+color:blue;
+
+}
+#header-container h3{
+	text-align:left;
+}
+#subject-container a{
+	text-decoration:none;
+	display:block;
+	text-align:center;
+	margin:5%;
+	
+}
+/*
+.question{
+	margin:6%;
+}
+#question{
+	background-color:yellow;
+	margin-left:30%;
+	margin-right:30%;
+	margin-top:2%;
+	padding:2%;
+}
+#question input{
+	margin:2%;
+}
+*/

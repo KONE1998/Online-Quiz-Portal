@@ -1,0 +1,96 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-image: url("background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+#menu {
+	text-align: center;
+	background-color: black;
+	padding: 10px 0;
+	color: white;
+}
+
+#title, #logout, #user{
+	display:inline-block;
+}
+
+#user {
+	float: left;
+	padding-left: 20px;
+}
+#logout{
+	float: right;
+	padding-right: 50px;
+}
+
+#menu a{
+	text-decoration: none;
+	color: white;
+}
+
+#div1 {
+	background-color: white;
+	margin: 20px 40vh 0 40vh;
+}
+
+#form {
+	padding: 40px;
+}
+
+#p1, #p1t {
+	display: inline-block;
+}
+
+#p2, #p2t {
+	display: inline-block;
+}
+
+#p3, #p3t {
+	display: inline-block;
+}
+
+#p4, #p4t {
+	display: inline-block;
+}
+
+#p5, #p5t {
+	display: inline-block;
+}
+
+#p6, #p6t {
+	display: inline-block;
+}
+#p7, #p7t {
+	display: inline-block;
+}
+
+#p8, #p8t {
+	display: inline-block;
+}
+
+#p1t, #p2t, #p3t, #p4t, #p5t, #p6t{
+	float: right;
+	width: 80%;	
+}
+
+#p7t, #p8t {
+	float: right;
+	width: 30%;
+	margin-right: 63vh;
+}
+
+#Submit {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	width: 100px;
+	height: 20px;
+}

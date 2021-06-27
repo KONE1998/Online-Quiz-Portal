@@ -1,0 +1,260 @@
+<?php
+include('quiz_result.php');
+ ?>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="title.css">
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" type="text/css" href="HtmlQuiz.css"> 
+<style>
+#footer{
+width: 100%;
+  height: 50px;
+  text-align:center;
+	font-weight:bold;
+	background-color:#b3d1ff;
+	color:#004d00;
+	position:relative;
+	}
+</style>
+
+</head>
+<body onload="f1()">
+<script type="text/javascript">
+// how many minutes
+var mins = 30;
+
+// how many seconds (don't change this)
+var secs = mins * 60;
+function countdown() {
+	setTimeout('Decrement()',1000);
+}
+function Decrement() {
+	if (document.getElementById) {
+		minutes = document.getElementById("minutes");
+		seconds = document.getElementById("seconds");
+		// if less than a minute remaining
+		if (seconds < 59) {
+			seconds.value = secs;
+		} else {
+			minutes.value = getminutes();
+			seconds.value = getseconds();
+		}
+		secs--;
+		if(secs >0)
+{
+setTimeout('Decrement()',1000);
+
+
+} else {
+		document.forms[0].submit.click();
+		//HERE IS YOUR TEXT WHEN THE TIME EXPIRES
+		alert('The time expired');
+		}
+
+	}
+}
+function getminutes() {
+	// minutes is seconds divided by 60, rounded down
+	mins = Math.floor(secs / 60);
+	return mins;
+}
+function getseconds() {
+	// take mins remaining (as seconds) away from total seconds remaining
+	return secs-Math.round(mins *60);
+}
+
+</script>        
+
+<div id="homepage">
+	<div id = 'menu-container'>
+			<div id = 'name'>
+				<h1 id="name">Online Quiz Portal</h1>
+			</div>
+
+			<div id = 'links'>
+				<ul>
+					<li><a href = 'title.php'>Home</a></li>
+					<li><a href = '#'>About</a></li>
+					<li><a href = '#'>Contact</a></li>
+					<li><a href = '#'>Profile</a></li>
+					<li><a href = 'logout.php'>Logout</a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+<div id="header-container">
+<h1 align="center">HTML QUIZ</h1>
+</div>
+<form action="quiz_result.php" method="post" id="quiz">
+<div id="question">
+<div class="question">
+
+  	<label>Que 1: HTML program is saved using ______ extension.</label><br>
+  	<div class="radioblock"> <input type="radio" name="q1" value="A"> .html</div><br>
+	<div class="radioblock"> <input type="radio" name="q1" value="B"> .htm</div><br>
+	<div class="radioblock"> <input type="radio" name="q1" value="c"> .ml</div><br> 
+</div>
+
+<div class="question">
+  	<label>Que 2: HTML program can be read and rendered by</label><br>
+    <div class="radioblock">	  <input type="radio" name="q2" value="A">compiler</div><br>
+    <div class="radioblock"> <input type="radio" name="q2" value="B"> server</div><br>
+	<div class="radioblock">  <input type="radio" name="q2" value="C"> web browser</div><br> 
+</div>
+
+<div class="question">
+  	<label>Que 3: HTML tags are surrounded by _____ brackets.</label><br>
+  	<div class="radioblock">  <input type="radio" name="q3" value="A"> Angle</div><br>
+	<div class="radioblock"> <input type="radio" name="q3" value="B">curly</div><br>
+	<div class="radioblock"> <input type="radio" name="q3" value="C">brackets</div><br> 
+</div>
+<div class="question">
+  	  <label>Que 4: Who is making the Web standards? </label><br>
+ <div class="radioblock"> 	  <input type="radio" name="q4" value="A">Googel</div><br>
+ <div class="radioblock"> <input type="radio" name="q4" value="B">Mozilla</div><br>
+ <div class="radioblock"> <input type="radio" name="q4" value="C">World wide web consoritum</div><br> 
+  	</div>
+<div class="question">
+  	  <label>Que 5: Choose the correct HTML element for the largest heading:</label><br>
+ <div class="radioblock"> 	  <input type="radio" name="q5" value="A"> &lt;h1&gt;</div><br>
+<div class="radioblock">  <input type="radio" name="q5" value="B"> &lt;h6&gt;</div><br>
+<div class="radioblock">  <input type="radio" name="q5" value="C"> &lt;heading&gt;</div><br> 
+  	</div>
+	<div class="question">
+  	  <label>Que 6: What is the correct HTML element for inserting a line break?</label><br>
+ <div class="radioblock"> 	  <input type="radio" name="q6" value="A"> &lt;br&gt;</div><br>
+<div class="radioblock">  <input type="radio" name="q6" value="B"> &lt;break&gt;</div><br>
+<div class="radioblock">  <input type="radio" name="q6" value="C"> &lt;lb&gt;</div><br> 
+  	</div>
+<div class="question">
+  	  <label>Que 7:  bgcolor is an attribute of body tag</label><br>
+ <div class="radioblock"> 	  <input type="radio" name="q7" value="A"> True</div><br>
+<div class="radioblock">  <input type="radio" name="q7" value="B"> False</div><br>
+ 
+ 
+  	</div>
+<div class="question">
+  	  <label>Que 8: What is cell padding?</label><br>
+ <div class="radioblock"> 	  <input type="radio" name="q8" value="A"> Used to separate cell walls from their contents.</div><br>
+<div class="radioblock">  <input type="radio" name="q8" value="B"> Used to set space between cells</div><br>
+<div class="radioblock">  <input type="radio" name="q8" value="C"> Both a and b above</div><br> 
+  	</div>
+<div class="question">
+  	  <label>Que 9:  What attribute is used to specify number of rows?</label><br>
+ <div class="radioblock"> 	  <input type="radio" name="q9" value="A"> Rownum</div><br>
+<div class="radioblock">  <input type="radio" name="q9" value="B"> Rownumb</div><br>
+<div class="radioblock">  <input type="radio" name="q9" value="C"> Rowspan</div><br> 
+  	</div>
+<div class="question">
+  	  <label>Que 10:What is the difference between XML and HTML?</label><br>
+ <div class="radioblock"> 	  <input type="radio" name="q10" value="A"> HTML is used for exchanging data, XML is not</div><br>
+<div class="radioblock">  <input type="radio" name="q10" value="B"> XML is used for exchanging data, HTML is not.</div><br>
+<div class="radioblock">  <input type="radio" name="q10" value="C"> HTML can have user defined tags, XML cannot</div><br> 
+<div class="radioblock"><input type='radio' name='q10' value='D'>Both b and c above</div><br/>
+	</div>
+<div class="question">
+  	  <label>Que 11: Which tags are most commonly used by search engines?</label><br>
+ <div class="radioblock"> 	  <input type="radio" name="q11" value="A"> heading</div><br>
+<div class="radioblock">  <input type="radio" name="q11" value="B"> title</div><br>
+<div class="radioblock">  <input type="radio" name="q11" value="C"> Paragraph</div><br> 
+<div class="radioblock">  <input type="radio" name="q11" value="D"> All the above</div><br> 
+  	</div>
+	<br><br>
+	<div id="navbuttons">
+	
+	<a class="left" onclick="nextSlide(-1)"><input type="Button" name="Back" value="Back"></a> &nbsp; 
+	<a class="right" onclick="nextSlide(1)"><input type="Button" name="Next" value="Next"></a>
+	<br><br>
+	</div>
+	
+	<div>
+	<center>
+	<input type="submit" name="Submit" value="Submit" target="_blank">
+	</center>
+	</div>
+	
+
+
+</div>
+</form>
+<?php
+    session_start();
+    if( empty( $_SESSION['quiz'] ) )$_SESSION['quiz']=date('Y-m-d H:i:s');
+?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script language ="javascript" >
+    <?php
+              $start=$_SESSION['quiz'];
+              $end=date('Y-m-d H:i:s', strtotime( $_SESSION['quiz'] . ' +20 minutes' ) );
+                echo "
+                    var date_quiz_start='$start';
+                    var date_quiz_end='$end';
+                    var time_quiz_end=new Date('$end').getTime();";
+      ?>
+        var tim;
+        var hour= 00;
+        var min = 01;
+        var sec = 60;
+        var f = new Date();
+        function f1() {
+            f2();
+            document.getElementById("starttime").innerHTML = "Your started your Exam at " + f.getHours() + ":" + f.getMinutes();
+        }
+        function f2() {
+            if (parseInt(sec) > 0) {
+                sec = parseInt(sec) - 1;
+                document.getElementById("showtime").innerHTML = "Your Left Time  is :"+hour+" hours:"+min+" Minutes :" + sec+" Seconds";
+                tim = setTimeout("f2()", 1000);
+            }
+            else {
+                if (parseInt(sec) == 0) {
+                    min = parseInt(min) - 1;
+                    if (parseInt(min) == 0) {
+                        clearTimeout(tim);
+                        location.href ="index.php";
+                    }
+                    else {
+                        sec = 60;
+                        document.getElementById("showtime").innerHTML = "Your Left Time  is :" + min + " Minutes ," + sec + " Seconds";
+                        tim = setTimeout("f2()", 1000);
+                    }
+                }
+            }
+        }
+    </script>
+
+    <form id="form1" runat="server">
+    <div>
+      <table width="100%" align="center">
+        <tr>
+          <td colspan="2">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="starttime"></div><br />
+            <div id="endtime"></div><br />
+            <div id="showtime"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <br />
+          </td>
+        </tr>
+      </table>
+      <br />
+    </div>
+    </form>
+
+<script src="HtmlQuiz.js"></script>
+<br/>
+<div id="footer">
+<p id="copy">Copyright &copy;2019 DINESH KUMAR R.<br/> All rights reserved</p>
+</div>
+</body>
+</html>

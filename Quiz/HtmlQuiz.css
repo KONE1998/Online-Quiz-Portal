@@ -1,0 +1,25 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+#questions{
+	background-color: white;
+	margin: 10% 20% 0 20%;
+	padding: 40px 40px 20px 60px;
+}
+
+.radioblock{
+	margin: 2px 0;
+	width: 90%;
+	height: 30px;
+	background-color: #f4f4f0;
+}
+input[type=radio]{
+	margin-top: 8px;
+}
+.radioblock:hover{
+	background-color: lavender;
+}
